@@ -6,7 +6,7 @@ function adicionarTarefa(){
   
 
     
-    let mensagemSucesso= "Tarefa dicionada com sucesso";
+    let mensagemSucesso= "Tarefa adicionada com sucesso";
     
     //pega o id do input
     let inputTarefa = document.getElementById("inputTarefa");
@@ -99,6 +99,7 @@ function editarTarefa(i) {
 
 
 function removerTarefa(i){
+  //essa funcao remove o indice atual do array
     tarefas.splice(i, 1);
 
      let mensagemExcluida = "Tarefa removida!";
@@ -112,7 +113,7 @@ function removerTarefa(i){
 }
 
 function limparLista() {
-    tarefas.length = 0
+    tarefas.length = 0//zerando a lista
     renderizarTarefas()
     const mensagem = document.getElementById("mensagem")
     mensagem.textContent = "Lista de tarefas limpa com sucesso!"
